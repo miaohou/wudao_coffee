@@ -1,0 +1,290 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>熨斗目花咖啡 Wudao Cafe</title>
+<link href="images/favicon-coffee.ico" rel="icon"  />
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<link rel="stylesheet" href="css/bootstrap.css">  
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/all.css" />
+<script src="js/jquery-2.2.3.min.js"></script>    
+<script src="js/bootstrap.js"></script>    
+<script>
+$(function(){
+	$('#menu_btn').click(function(){
+			$('#main_menu').slideToggle(500);
+			return false;
+	})	
+	
+	$('#more_info').click(function(){
+		if($(window).width() > 992){
+			$('html,body').animate({
+        		scrollTop: 600
+    			}, 1500, 'swing');
+		}else{
+			$('html,body').animate({
+        		scrollTop: 420
+    			}, 1500, 'swing');
+		}
+	})
+	
+	//scroll_tec
+    $("#main_menu li a").click(function (event) {
+    event.preventDefault();
+    //calculate destination place
+    var dest = 0;
+    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+        dest = $(document).height() - $(window).height();
+    } else {
+        dest = $(this.hash).offset().top-40;
+    }
+    //go to destination
+    $('html,body').animate({
+        scrollTop: dest
+    }, 1500, 'swing');
+    });
+	
+})
+</script>
+</head>
+<body>
+	<section id="index">
+		<header>
+        	<div class="logo">
+            	<a href="#" id="menu_btn"><img src="images/logo.png"></a>
+            	<ul id="main_menu">
+                	<li><a href="#about"><i class="fa fa-info"></i><span>關於</span></a></li>
+                	<li><a href="#menu"><i class="fa fa-spoon"></i><span>菜單</span></a></li>
+                	<li><a href="#site"><i class="fa fa-map-marker"></i><span>位置</span></a></li>
+                	<li><a href="#contact"><i class="fa fa-phone"></i><span>聯絡</span></a></li>
+                	<li><a href="#work"><i class="fa fa-users"></i><span>職位</span></a></li>
+            	</ul>
+            </div>
+        </header>
+    	<div id="main_logo"></div>
+        <div class="more"><a href="#" id="more_info"><i class="fa fa-angle-down"></i></a></div>
+    </section>
+    <section id="about" class="container section">
+    	<h1><span>-&nbsp;About Us&nbsp;-</span><br>關於我們</h1>
+    	<div class="row">
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/pet.jpg">
+                	<div class="text">綠意空間<h1>Green Space</h1></div>
+                </div>
+            </div>
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/salad.jpg">
+                	<div class="text">每日限量<h1>Daily Homemade</h1></div>
+                </div>
+            </div>
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/store1.jpg">
+                	<div class="text">珈啡朝食<h1>Coffee & Brunch</h1></div>
+                </div>
+            </div>
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/sandwich.jpg">
+                	<div class="text">輕食小點<h1>Sandwich</h1></div>
+                </div>
+            </div>
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/bean.jpg">
+                	<div class="text">自家烘焙<h1>Home Roast Beans</h1></div>
+                </div>
+            </div>
+        	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+            	<div class="pic">
+                	<img src="images/mac.jpg">
+                	<div class="text">不收服務費<h1>No service charge</h1></div>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section id="menu" class="section">
+    	<h1><span>-&nbsp;Menu&nbsp;-</span><br>菜單</h1>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<h2>咖啡/Cafe</h2>
+            		<ul>
+                		<li>經典美式 <em>Americano</em>  <span>NT 100</span></li>
+                		<li>拿鐵 <em>Latte</em>  <span>NT 120</span></li>
+                		<li>麥芽牛奶 <em>Malted Milk</em>  <span>NT 110</span></li>
+                		<li>巷弄特調 <em>Alley Special</em>  <span>NT 120</span></li>
+                        <li>焦糖瑪奇朵  <em>Carmel Macchitao</em> <span>NT 350</span></li>
+                	</ul>
+            	</div>
+        		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<h2>輕食 Meal</h2>
+            		<ul>
+                		<li>蔬菜野菇鹹派 <em>Vegetable Pie</em>  <span>NT 100</span></li>
+                		<li>厚切豬排咖哩 <em>Pork Curry</em>  <span>NT 300</span></li>
+                		<li>普羅旺香頌經典 <em>French Classical</em>  <span>NT 250</span></li>
+                        <li>德式農夫燻腸  <em>German Sausage</em> <span>NT 350</span></li>
+                        <li>德式農夫燻腸  <em>German Sausage</em> <span>NT 350</span></li>
+                	</ul>
+            	</div>
+        		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            		<h2>甜點 Dessert</h2>
+            		<ul>
+                		<li>每日起司蛋糕 <em>Cheese Cake</em>  <span>NT 120</span></li>
+                		<li>經典抹茶塔 <em>Matcha Tart</em>  <span>NT 100</span></li>
+                		<li>酸奶葡萄塔 <em>Yogert Tart</em> <span>NT 400</span></li>
+                        <li>有藏年糕冰  <em>Mochi Ice</em> <span>NT 220</span></li>
+                        <li>蔓越莓司康  <em>Cranberry Scone</em> <span>NT 60/個</span></li>
+                	</ul>
+            	</div>
+        	</div>
+        </div>
+    </section>
+    <section id="site" class="section">
+    	<h1><span>-&nbsp;Come Find Us&nbsp;-</span><br>假日好去處</h1>
+        <h2>位於新“米”街，有更多時刻想好好看看這城市的改變、季節物語。
+        <br>以及來往的人群機車或一些有意思的事兒<br><a href="#"><i class="fa fa-map-marker"></i>台南市中西區新美街90號</a></h2>
+    </section>
+    <section id="contact" class="section">
+    	<h1><span>-&nbsp;Contact Us&nbsp;-</span><br>聯絡我們</h1>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-6 col-xs-12">
+            		<h2>營業時間 Open</h2>
+            		<ul>
+                		<li>週一～五<em>Mon - Fri</em>  <span>09:00am-21:00pm</span></li>
+                		<li>週末<em>Sat & Sun</em>  <span>10:00am-22:00pm</span></li>
+                        <li>請來電預約</li>
+                	</ul>
+            	</div>
+        		<div class=" col-sm-6 col-xs-12">
+            		<h2>聯絡方式 Contact</h2>
+            		<ul>
+                		<li><i class="fa fa-phone"></i>市話 <span>06-221-2573</span></li>
+                		<li><i class="fa fa-facebook-square"></i>Facebook  <span><a href="#">
+熨斗目花珈琲 珈哩 cafe WUDAO</a></span></li>
+                		<li><i class="fa fa-envelope"></i>Mail  <span>wudaocafe@gmail.com</span></li>
+                    </ul>
+            	</div>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="section">
+    	<h1><span>-&nbsp;We Need You&nbsp;-</span><br>工作機會</h1>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                	<div class="person">
+                        <div class="title">正職店員</div>
+                        <div class="text">愛喝咖啡、樂於助人、想要學習咖啡的相關技術。</div>
+                        <a href="#" class="btn btn-grey" data-toggle="modal" data-target="#myModal01">更多資訊</a>
+                    </div>
+    			</div>
+        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                	<div class="person">
+                        <div class="title">兼職店員</div>
+                        <div class="text">愛喝咖啡、樂於助人、想要學習咖啡的相關技術。</div>
+                        <a href="#" class="btn btn-grey" data-toggle="modal" data-target="#myModal02">更多資訊</a>
+                    </div>
+    			</div>
+        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                	<div class="person">
+                        <div class="title">營運經理</div>
+                        <div class="text">希望你也愛喝咖啡，有管理相關經歷</div>
+                        <a href="#" class="btn btn-grey" data-toggle="modal" data-target="#myModal03">更多資訊</a>
+                    </div>
+    			</div>
+         		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                	<div class="person">
+                        <div class="title">網路行銷</div>
+                        <div class="text">希望你也愛喝咖啡，有網路行銷經歷</div>
+                        <a href="#" class="btn btn-grey" data-toggle="modal" data-target="#myModal04">更多資訊</a>
+                    </div>
+    			</div>               
+            </div>
+        </div>
+    </section>
+    <section id="copyright" class="section">
+    	<img src="images/logo_lg.png">
+        <p>2016 WUDAO Cafe, Ltd. All Rights Reserved.</p>
+    </section>
+    <div class="modal fade" id="myModal01">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">正職店員</h4>
+          </div>
+          <div class="modal-body">
+            <p>愛喝咖啡、樂於助人、想要學習咖啡的相關技術。</p>
+            <p>月薪 <span>NT28,000</span></p>
+            <p>勞健保、三節獎金、教育訓練</p>
+            <p>歡迎帶毛孩上班</p>
+            <h1>請寄履歷至: <span>joechen@gmail.com</span> 陳先生</h1>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->    
+    
+    <div class="modal fade" id="myModal02">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">兼職店員</h4>
+          </div>
+          <div class="modal-body">
+            <p>愛喝咖啡、樂於助人、想要學習咖啡的相關技術。</p>
+            <p>時薪 <span>NT150 up</span></p>
+            <p>早班：9:00~13:00</p>
+            <p>午班：13:00~17:00</p>
+            <p>晚班：17:00~22:00</p>
+            <p>勞健保、三節獎金、教育訓練</p>
+            <p>歡迎帶毛孩上班</p>
+            <h1>請寄履歷至: <span>joechen@gmail.com</span> 陳先生</h1>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->    
+    
+    <div class="modal fade" id="myModal03">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">營運經理</h4>
+          </div>
+          <div class="modal-body">
+            <p>希望你也愛喝咖啡，有管理相關經歷</p>
+            <p>月薪 <span>NT60,000</span></p>
+            <p>勞健保、三節獎金、教育訓練</p>
+            <p>歡迎帶毛孩上班</p>
+            <h1>請寄履歷至: <span>joe@gmail.com</span> 蕭先生</h1>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->    
+    
+    <div class="modal fade" id="myModal04">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">網路行銷</h4>
+          </div>
+          <div class="modal-body">
+            <p>希望你也愛喝咖啡，有網路行銷相關經歷</p>
+            <p>月薪 <span>NT40,000</span></p>
+            <p>勞健保、三節獎金、教育訓練</p>
+            <p>歡迎帶毛孩上班</p>
+            <h1>請寄履歷至: <span>joechen@gmail.com</span> 陳先生</h1>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->    
+</body>
+</html>
